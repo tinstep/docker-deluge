@@ -30,6 +30,7 @@ RUN \
 	p7zip-full \
 	unrar \
 	unzip && \
+sed -i 's|return pkg_resources.get_distribution('Deluge').version|return "Deluge 2.0.3-2"|g' /etc/nginx/nginx.conf &&
  echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/* \
